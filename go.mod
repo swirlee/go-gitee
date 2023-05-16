@@ -1,4 +1,4 @@
-module github.com/liwenqiu/go-gitee
+module github.com/swirlee/go-gitee
 
 go 1.17
 
