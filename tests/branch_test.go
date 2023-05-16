@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-retryablehttp"
-	"github.com/liwenqiu/go-gitee"
+	"github.com/swirlee/go-gitee"
 )
 
 func TestListBranches_List(t *testing.T) {
