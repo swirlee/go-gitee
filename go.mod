@@ -4,8 +4,8 @@ go 1.17
 
 require (
 	github.com/google/go-querystring v1.1.0
-	github.com/google/martian v2.1.0+incompatible
 	github.com/hashicorp/go-retryablehttp v0.7.0
+	github.com/sirupsen/logrus v1.9.0
 )
 
 require (

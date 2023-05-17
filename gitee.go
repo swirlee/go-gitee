@@ -10,9 +10,8 @@ import (
 	"sort"
 	"strconv"
 	"strings"
-
+	log "github.com/sirupsen/logrus"
 	"github.com/google/go-querystring/query"
-	"github.com/google/martian/log"
 	"github.com/hashicorp/go-retryablehttp"
 )
 
