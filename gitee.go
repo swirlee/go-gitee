@@ -12,6 +12,7 @@ import (
 	"strings"
 
 	"github.com/google/go-querystring/query"
+	"github.com/google/martian/log"
 	"github.com/hashicorp/go-retryablehttp"
 )
 
@@ -243,27 +244,38 @@ func (c *Client) Do(req *retryablehttp.Request, v interface{}) (*Response, error
 	if err != nil {
 		return nil, err
 	}
+	log.Info("111111")
 	defer resp.Body.Close()
-
+	log.Info("222222")
 	b, err := io.ReadAll(resp.Body)
+	log.Info("333333")
 	if err != nil {
+		log.Info("444444")
 		return nil, err
 	}
+	log.Info("555555")
 	response := newResponse(resp, b)
 
+	log.Info("666666")
 	err = CheckResponse(resp)
+	log.Info("777777")
 	if err != nil {
+		log.Info("888888")
 		return response, err
 	}
 
+	log.Info("999999")
 	if v != nil {
+		log.Info("aaaaaa")
 		if w, ok := v.(io.Writer); ok {
+			log.Info("bbbbbb")
 			_, err = io.Copy(w, bytes.NewReader(b))
 		} else {
+			log.Info("cccccc")
 			err = json.Unmarshal(b, v)
 		}
 	}
-
+	log.Info("dddddd")
 	return response, err
 }
 
